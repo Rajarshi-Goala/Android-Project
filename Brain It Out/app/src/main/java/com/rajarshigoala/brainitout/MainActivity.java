@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         // button action
         continueButton = (Button) findViewById(R.id.continueButton);
-        continueButton.animate().alpha(1).setStartDelay(5000).setDuration(500);
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
