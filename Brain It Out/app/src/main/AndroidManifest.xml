@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BrainItOutFindTheHiddenReward">
-        <activity android:name=".main_menu"></activity>
+        <activity android:name=".level1"></activity>
+        <activity android:name=".main_menu" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
