@@ -21,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
         //views declaration
         TextView greetings = (TextView) findViewById(R.id.greetingsText);
+        TextView footer = (TextView) findViewById(R.id.footerText);
         Button continueButton;
 
         // Text animation alpha and translation
         greetings.animate().alpha(1).setDuration(2000);
         greetings.animate().translationY(-40).setStartDelay(3000).setDuration(1000);
+        footer.animate().alpha(1).setStartDelay(2000).setDuration(1000);
 
 
         // button action
