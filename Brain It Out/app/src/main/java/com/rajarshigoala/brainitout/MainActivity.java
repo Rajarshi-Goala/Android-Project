@@ -25,13 +25,14 @@ public class MainActivity extends AppCompatActivity {
         Button continueButton;
 
         // Text animation alpha and translation
-        greetings.animate().alpha(1).setDuration(2000);
+        greetings.animate().alpha(1).setDuration(1000);
         greetings.animate().translationY(-40).setStartDelay(3000).setDuration(1000);
-        footer.animate().alpha(1).setStartDelay(2000).setDuration(1000);
+
 
 
         // button action
         continueButton = (Button) findViewById(R.id.continueButton);
+        continueButton.animate().alpha(1).setStartDelay(4000).setDuration(500);
         continueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
