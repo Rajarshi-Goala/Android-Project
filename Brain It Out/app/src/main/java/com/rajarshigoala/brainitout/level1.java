@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class level1 extends AppCompatActivity {
 int result = 8;
+Toast currentToast;
     @Override
     protected void onCreate(Bundle savedInstanceState) { 
         super.onCreate(savedInstanceState);
@@ -31,14 +32,20 @@ int result = 8;
         switch1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(level1.this, "This is a switch button", Toast.LENGTH_SHORT).show();
+                if(currentToast != null)
+                    currentToast.cancel();
+                currentToast = Toast.makeText(level1.this, "This is a switch button", Toast.LENGTH_SHORT);
+                currentToast.show();
             }
         });
         switch2 = findViewById(R.id.switch6lv1);
         switch2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(level1.this, "This is a switch button", Toast.LENGTH_SHORT).show();
+                if(currentToast != null)
+                    currentToast.cancel();
+                currentToast = Toast.makeText(level1.this, "This is a switch button", Toast.LENGTH_SHORT);
+                currentToast.show();
             }
         });
 
@@ -46,7 +53,10 @@ int result = 8;
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(level1.this, "This is a normal button", Toast.LENGTH_SHORT).show();
+                if(currentToast != null)
+                    currentToast.cancel();
+                currentToast = Toast.makeText(level1.this, "This is a normal button", Toast.LENGTH_SHORT);
+                currentToast.show();
             }
         });
         toggle = findViewById(R.id.toggleButton1lv1);
@@ -54,7 +64,10 @@ int result = 8;
             @Override
             public void onClick(View v) {
 
-                    Toast.makeText(level1.this, "This is a toggle button", Toast.LENGTH_SHORT).show();
+                if(currentToast != null)
+                    currentToast.cancel();
+                currentToast = Toast.makeText(level1.this, "This is a toggle button", Toast.LENGTH_SHORT);
+                currentToast.show();
             }
         });
 
@@ -62,33 +75,56 @@ int result = 8;
         hidden1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(level1.this, "You found hidden button 1", Toast.LENGTH_SHORT).show();
+
+                if(currentToast != null)
+                    currentToast.cancel();
+                currentToast = Toast.makeText(level1.this, "You've found a hidden button", Toast.LENGTH_SHORT);
+                currentToast.show();
             }
         });
         hidden2 = findViewById(R.id.hiddenswitch2lv1);
         hidden2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(level1.this, "You found hidden button 2", Toast.LENGTH_SHORT).show();
+                if(currentToast != null)
+                    currentToast.cancel();
+                currentToast = Toast.makeText(level1.this, "You've found a hidden button", Toast.LENGTH_SHORT);
+                currentToast.show();
             }
         });
         hidden3 = findViewById(R.id.hiddenswitch3lv1);
         hidden3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(level1.this, "You found hidden button 3", Toast.LENGTH_SHORT).show();
+                if(currentToast != null)
+                    currentToast.cancel();
+                currentToast = Toast.makeText(level1.this, "You've found a hidden button", Toast.LENGTH_SHORT);
+                currentToast.show();
             }
         });
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int inputreceived =  Integer.parseInt(input.getText().toString());
-                if(result==inputreceived){
-                    afterSubmit();
+                if (input.getText().toString().matches("")){
+                    if(currentToast != null)
+                        currentToast.cancel();
+                    currentToast = Toast.makeText(level1.this, "You have not entered anything! Please enter a number.", Toast.LENGTH_SHORT);
+                    currentToast.show();
                 }
                 else{
-                    Toast.makeText(level1.this, "Hmm..Thats not the correct number", Toast.LENGTH_SHORT).show();
+                    int inputreceived =  Integer.parseInt(input.getText().toString());
+                    if(result==inputreceived){
+                        afterSubmit();
+                    }
+                    else{
+                        if(currentToast != null)
+                            currentToast.cancel();
+                        currentToast = Toast.makeText(level1.this, "That is not the correct number. Please check again!", Toast.LENGTH_SHORT);
+                        currentToast.show();
+                    }
+
                 }
+
             }
         });
 
