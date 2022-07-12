@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".level1">
-
     <TextView
         android:id="@+id/questionTextlv1"
         android:layout_width="wrap_content"
@@ -60,82 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/youranswerlv1"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/questionmark3lv1"
-        android:layout_width="121dp"
-        android:layout_height="117dp"
-        android:rotation="-46"
-        android:rotationY="182"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.939"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219"
-        app:srcCompat="@drawable/questionmark" />
 
-    <ImageView
-        android:id="@+id/questionmark2lv1"
-        android:layout_width="121dp"
-        android:layout_height="117dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219"
-        app:srcCompat="@drawable/questionmark" />
-
-    <ImageView
-        android:id="@+id/questionmark1lv1"
-        android:layout_width="116dp"
-        android:layout_height="115dp"
-        android:rotation="-46"
-        android:rotationY="360"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.219"
-        app:srcCompat="@drawable/questionmark" />
-
-    <Switch
-        android:id="@+id/hiddenswitch2lv1"
-        android:layout_width="49dp"
-        android:layout_height="28dp"
-        android:alpha="0.5"
-        android:rotation="95"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.33" />
-
-    <Switch
-        android:id="@+id/hiddenswitch1lv1"
-        android:layout_width="43dp"
-        android:layout_height="25dp"
-        android:alpha="0.6"
-        android:rotation="95"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.316" />
-
-    <Switch
-        android:id="@+id/hiddenswitch3lv1"
-        android:layout_width="43dp"
-        android:layout_height="25dp"
-        android:alpha="0.4"
-        android:rotation="95"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.76"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.315" />
 
     <Button
         android:id="@+id/button2lv1"
@@ -214,7 +138,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="161dp"
         android:layout_marginBottom="206dp"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/thumbsuplv1"
         app:layout_constraintEnd_toStartOf="@+id/button2lv1"
         app:layout_constraintHorizontal_bias="0.232"
@@ -227,14 +150,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="161dp"
-        android:layout_marginBottom="206dp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/thumbsuplv1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2lv1"
         app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/question2button"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/lv1heading"
@@ -259,9 +180,153 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="(You can turn off Dark mode now for better experience.)"
+        android:text="(You can turn off Dark mode if you like.)"
         android:textSize="8sp"
-        tools:layout_editor_absoluteX="181dp"
-        tools:layout_editor_absoluteY="45dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lv1heading" />
 
+
+// Question mark area
+
+
+    <RelativeLayout
+        android:layout_width="411dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/question2button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTextlv1"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/questionmark3lv1"
+            android:layout_width="121dp"
+            android:layout_height="117dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="6dp"
+            android:rotation="-46"
+            android:rotationY="182"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.939"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.219"
+            app:srcCompat="@drawable/questionmark" />
+
+        <ImageView
+            android:id="@+id/questionmark2lv1"
+            android:layout_width="121dp"
+            android:layout_height="117dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="149dp"
+            android:layout_marginLeft="149dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="141dp"
+            android:layout_marginRight="141dp"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.219"
+            app:srcCompat="@drawable/questionmark" />
+
+        <ImageView
+            android:id="@+id/questionmark1lv1"
+            android:layout_width="116dp"
+            android:layout_height="115dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:rotation="-46"
+            android:rotationY="360"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.219"
+            app:srcCompat="@drawable/questionmark" />
+
+        <Switch
+            android:id="@+id/hiddenswitch2lv1"
+            android:layout_width="49dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="72dp"
+            android:layout_marginRight="72dp"
+            android:layout_marginBottom="10dp"
+            android:alpha="0.4"
+            android:rotation="95"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.33" />
+
+        <Switch
+            android:id="@+id/hiddenswitch1lv1"
+            android:layout_width="43dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="186dp"
+            android:layout_marginLeft="186dp"
+            android:layout_marginTop="112dp"
+            android:layout_marginEnd="182dp"
+            android:layout_marginRight="182dp"
+            android:layout_marginBottom="6dp"
+            android:alpha="0.4"
+            android:rotation="95"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.225"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.316" />
+
+        <Switch
+            android:id="@+id/hiddenswitch3lv1"
+            android:layout_width="43dp"
+            android:layout_height="25dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="81dp"
+            android:layout_marginLeft="81dp"
+            android:layout_marginBottom="11dp"
+            android:alpha="0.4"
+            android:rotation="95"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.315" />
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

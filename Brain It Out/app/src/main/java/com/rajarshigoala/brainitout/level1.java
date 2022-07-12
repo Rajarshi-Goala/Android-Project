@@ -98,11 +98,19 @@ int result = 8;
     public void afterSubmit(){
         Button continuebutton;
         ImageView thumbsup = findViewById(R.id.thumbsuplv1);
+        TextView textView = findViewById(R.id.answerlv1);
+        textView.setVisibility(View.VISIBLE);
         thumbsup.setVisibility(View.VISIBLE);
         continuebutton=findViewById(R.id.continuelv1);
         continuebutton.setVisibility(View.VISIBLE);
-        Intent intent = new Intent(level1.this,Level2.class);
-        startActivity(intent);
+        continuebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(level1.this,Level2.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 
