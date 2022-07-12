@@ -254,4 +254,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.444" />
 
+    <TextView
+        android:id="@+id/desclv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="(You can turn off Dark mode now for better experience.)"
+        android:textSize="8sp"
+        tools:layout_editor_absoluteX="181dp"
+        tools:layout_editor_absoluteY="45dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
