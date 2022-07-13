@@ -83,7 +83,7 @@ public class Level2 extends AppCompatActivity {
     public void afterfix(){
         TextView textView3 = findViewById(R.id.textView3);
         Button nextButton = findViewById(R.id.nextButton);
-        ImageView imageView = findViewById(R.id.thumbsuplv3);
+        ImageView imageView = findViewById(R.id.thumbsuplv2);
         imageView.setVisibility(View.VISIBLE);
         textView3.setVisibility(View.VISIBLE);
         nextButton.setVisibility(View.VISIBLE);
