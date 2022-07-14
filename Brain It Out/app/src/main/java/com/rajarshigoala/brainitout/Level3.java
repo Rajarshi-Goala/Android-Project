@@ -15,7 +15,7 @@ import android.widget.Toast;
 import android.widget.VideoView;
 
 public class Level3 extends AppCompatActivity {
-    double answer = 0.67;
+    double answer = 0.56;
     Toast currentToast;
 
     @Override
@@ -38,16 +38,27 @@ public class Level3 extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                double inputans = Double.parseDouble(editText.getText().toString());
-                if (inputans == answer) {
-                    videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.congratulations);
-                    videoView.start();
-                    aftercheck(check);
-                } else {
+                if (editText.getText().toString().equals("")){
                     if (currentToast != null)
                         currentToast.cancel();
-                    Toast.makeText(Level3.this, "Nope this is not the correct answer", Toast.LENGTH_SHORT).show();
+                    currentToast = Toast.makeText(Level3.this, "Write a probability value before clicking submit.", Toast.LENGTH_SHORT);
+                    currentToast.show();
                 }
+                else{
+                    double inputans = Double.parseDouble(editText.getText().toString());
+                    if (inputans == answer) {
+                        videoView.setVideoPath("android.resource://" + getPackageName() + "/" + R.raw.congratulations);
+                        videoView.start();
+                        aftercheck(check);
+                    } else {
+                        if (currentToast != null)
+                            currentToast.cancel();
+                        currentToast = Toast.makeText(Level3.this, "Nope this is not the correct answer", Toast.LENGTH_SHORT);
+                        currentToast.show();
+                    }
+
+                }
+
             }
         });
     }
@@ -90,6 +101,8 @@ public class Level3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Level3.this,Rewardspage.class);
+                String user = getIntent().getStringExtra("uname");
+                intent.putExtra("uname",user);
                 startActivity(intent);
             }
         });

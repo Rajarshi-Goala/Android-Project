@@ -143,6 +143,8 @@ Toast currentToast;
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(level1.this,Level2.class);
+                String user = getIntent().getStringExtra("uname");
+                intent.putExtra("uname",user);
                 startActivity(intent);
             }
         });

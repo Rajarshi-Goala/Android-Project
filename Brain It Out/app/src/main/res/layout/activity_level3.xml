@@ -8,9 +8,12 @@
 
     <TextView
         android:id="@+id/lv3textView1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:drawable/editbox_background"
+        android:gravity="center"
         android:text="Welcome to the Level 3 - The final level !"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -86,7 +89,7 @@
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:gravity="center"
-        android:text="From the above video, what is the probability (upto two decimal) of the player killing a target?"
+        android:text="From the above video, what is the probability (upto two decimal) of the player hitting a target?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"

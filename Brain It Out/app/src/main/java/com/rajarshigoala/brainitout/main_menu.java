@@ -28,7 +28,11 @@ public class main_menu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 user = editText.getText().toString();
-                aftersubmit();
+                if(user.equals("")){
+                    Toast.makeText(main_menu.this, "Do you not have a name?", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    aftersubmit();
             }
         });
     }
@@ -56,8 +60,10 @@ public class main_menu extends AppCompatActivity {
         textView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
                 Intent intent = new Intent(main_menu.this,level1.class);
-                intent.putExtra("usernname",user);
+                intent.putExtra("uname",user);
                 startActivity(intent);
             }
         });

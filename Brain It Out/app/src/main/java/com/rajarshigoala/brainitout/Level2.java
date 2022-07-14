@@ -98,6 +98,8 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Level2.this,Level3.class);
+                String user = getIntent().getStringExtra("uname");
+                intent.putExtra("uname",user);
                 startActivity(intent);
             }
         });
