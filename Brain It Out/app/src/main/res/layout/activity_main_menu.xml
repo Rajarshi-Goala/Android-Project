@@ -58,8 +58,8 @@
 
     <TextView
         android:id="@+id/introText"
-        android:layout_width="394dp"
-        android:layout_height="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fontFamily="monospace"
         android:text="This is a Brain Teaser Game. \nThere are some fun challenges, riddles and hidden items. You can proceed to the next level when you discover the answer of a current level.                             \nThere is also an exciting reward which awaits after completion!!!\n\nThe game has now begun anything and everything from now is a challenge."
         android:textSize="12sp"
